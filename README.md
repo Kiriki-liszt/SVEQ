@@ -1,5 +1,7 @@
 # SVEQ  
 
+<img src="https://raw.githubusercontent.com/Kiriki-liszt/SVEQ/main/screenshot.png"  width="600"/>  
+
 SVEQ is 'State Space', SVF EQ.  
 Runs in double precision 64-bit internal processing. Also double precision input / output if supported.  
 Internal sample rate is oversampled to 192/176.2kHz in 48/44.1kHz, 96/88.1kHz sample rates.  
@@ -15,7 +17,7 @@ It does run under 44.1kHz, but may have some EQ curve cramping.
 >  
 > <https://steinbergmedia.github.io/vst3_dev_portal/pages/FAQ/Licensing.html>  
 
-![120C7E3245DD5916ACD2E8E6AD51E8FD_snapshot](https://github.com/Kiriki-liszt/Sky_Blue_EQ4/assets/107096260/142e3c12-cd5f-415d-9b72-8b4f04419633)
+![120C7E3245DD5916ACD2E8E6AD51E8FD_snapshot](https://github.com/Kiriki-liszt/Sky_Blue_EQ4/assets/107096260/142e3c12-cd5f-415d-9b72-8b4f04419633)  
 
 VSTSDK 3.7.9 used  
 VSTGUI 4.12 used  
@@ -28,4 +30,4 @@ v0.0.1   : intial try.
 
 > git submodule init  
 > cd libs  
-> git submodule add -f https://github.com/simd-everywhere/simde.git  
+> git submodule add -f <https://github.com/simd-everywhere/simde.git>  
