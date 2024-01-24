@@ -1,0 +1,79 @@
+#include <windows.h>
+#include "../source/version.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+
+SVEQ_editor.uidesc DATA "SVEQ_editor.uidesc"
+
+knob_blue.png          PNG "knob_blue.png"
+knob_red.png          PNG "knob_red.png"
+knob_green.png          PNG "knob_green.png"
+knob_purple.png          PNG "knob_purple.png"
+knob_black.png          PNG "knob_black.png"
+knob_yellow.png          PNG "knob_yellow.png"
+
+knob_blue_2.0x.png     PNG "knob_blue_2.0x.png"
+knob_red_2.0x.png     PNG "knob_red_2.0x.png"
+knob_green_2.0x.png     PNG "knob_green_2.0x.png"
+knob_purple_2.0x.png     PNG "knob_purple_2.0x.png"
+knob_black_2.0x.png     PNG "knob_black_2.0x.png"
+knob_yellow_2.0x.png     PNG "knob_yellow_2.0x.png"
+
+knob_blue_sml.png      PNG "knob_blue_sml.png"
+knob_red_sml.png      PNG "knob_red_sml.png"
+knob_green_sml.png      PNG "knob_green_sml.png"
+knob_purple_sml.png      PNG "knob_purple_sml.png"
+knob_black_sml.png      PNG "knob_black_sml.png"
+knob_yellow_sml.png      PNG "knob_yellow_sml.png"
+
+knob_blue_sml_2.0x.png PNG "knob_blue_sml_2.0x.png"
+knob_red_sml_2.0x.png PNG "knob_red_sml_2.0x.png"
+knob_green_sml_2.0x.png PNG "knob_green_sml_2.0x.png"
+knob_purple_sml_2.0x.png PNG "knob_purple_sml_2.0x.png"
+knob_black_sml_2.0x.png PNG "knob_black_sml_2.0x.png"
+knob_yellow_sml_2.0x.png PNG "knob_yellow_sml_2.0x.png"
+
+btn_curve.png PNG "btn_curve.png"
+btn_curve_2.0x.png PNG "btn_curve_2.0x.png"
+
+PretendardRegular RCDATA "Pretendard-Regular.ttf"
+
+/////////////////////////////////////////////////////////////////////////////
+// Version
+/////////////////////////////////////////////////////////////////////////////
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION MAJOR_VERSION_INT,SUB_VERSION_INT,RELEASE_NUMBER_INT,BUILD_NUMBER_INT
+ PRODUCTVERSION MAJOR_VERSION_INT,SUB_VERSION_INT,RELEASE_NUMBER_INT,BUILD_NUMBER_INT
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040004e4"
+        BEGIN
+            VALUE "FileVersion",      FULL_VERSION_STR"\0"
+            VALUE "ProductVersion",   FULL_VERSION_STR"\0"
+            VALUE "OriginalFilename", stringOriginalFilename"\0"
+            VALUE "FileDescription",  stringFileDescription"\0"
+            VALUE "InternalName",     stringFileDescription"\0"
+            VALUE "ProductName",      stringFileDescription"\0"
+            VALUE "CompanyName",      stringCompanyName"\0"
+            VALUE "LegalCopyright",   stringLegalCopyright"\0"
+            VALUE "LegalTrademarks",  stringLegalTrademarks"\0"
+            //VALUE "PrivateBuild",     " \0"
+            //VALUE "SpecialBuild",     " \0"
+            //VALUE "Comments",         " \0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x400, 1252
+    END
+END
