@@ -12,30 +12,6 @@
 #include "vstgui/plugin-bindings/vst3editor.h"
 
 namespace VSTGUI {
-
-	class KnobText : public CTextEdit
-	{
-	public:
-		KnobText(const VSTGUI::CRect& size);
-		//~KnobText();
-		void updateText(IPlatformTextEdit* pte);
-		// --- CView methods ---
-		void draw(CDrawContext* pContext) override;
-		//CMouseEventResult onMouseDown(CPoint& where, const CButtonState& buttons) override;
-		//CMouseEventResult onMouseUp(CPoint& where, const CButtonState& buttons) override;
-		//CMouseEventResult onMouseMoved(CPoint& where, const CButtonState& buttons) override;
-
-		CLASS_METHODS(KnobText, CTextEdit)
-
-	private:
-		// --- IDependent (FObject) methods ---
-
-		//void PLUGIN_API update(Steinberg::FUnknown* changedUnknown, Steinberg::int32 message) override;
-
-		// --- attributes ---
-
-	};
-
 	class _6dBButton : public CTextButton, public Steinberg::FObject, public DelegationController
 	{
 	public:

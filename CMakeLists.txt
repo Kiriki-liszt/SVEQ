@@ -82,7 +82,46 @@ if(SMTG_ENABLE_VSTGUI_SUPPORT)
     smtg_target_add_plugin_resources(SVEQ
         RESOURCES
             "resource/SVEQ_editor.uidesc"
+            
+            "resource/knob_blue.png"
+            "resource/knob_blue_2.0x.png"
+            "resource/knob_blue_sml.png"
+            "resource/knob_blue_sml_2.0x.png"
+
+            "resource/knob_black.png"
+            "resource/knob_black_2.0x.png"
+            "resource/knob_black_sml.png"
+            "resource/knob_black_sml_2.0x.png"
+
+            "resource/knob_green.png"
+            "resource/knob_green_2.0x.png"
+            "resource/knob_green_sml.png"
+            "resource/knob_green_sml_2.0x.png"
+
+            "resource/knob_red.png"
+            "resource/knob_red_2.0x.png"
+            "resource/knob_red_sml.png"
+            "resource/knob_red_sml_2.0x.png"
+
+            "resource/knob_purple.png"
+            "resource/knob_purple_2.0x.png"
+            "resource/knob_purple_sml.png"
+            "resource/knob_purple_sml_2.0x.png"
+            
+            "resource/knob_yellow.png"
+            "resource/knob_yellow_2.0x.png"
+            "resource/knob_yellow_sml.png"
+            "resource/knob_yellow_sml_2.0x.png"
+
+            "resource/btn_curve.png"
+            "resource/btn_curve_2.0x.png"
     )
+    smtg_target_add_plugin_resources (SVEQ
+     RESOURCES
+       "resource/Pretendard-Regular.ttf"
+     OUTPUT_SUBDIRECTORY
+       Fonts
+   )
 endif(SMTG_ENABLE_VSTGUI_SUPPORT)
 # -------------------
 
@@ -133,9 +172,9 @@ endif(SMTG_MAC)
 
 # Add an AUv2 target
 if (SMTG_MAC AND XCODE AND SMTG_COREAUDIO_SDK_PATH)
-	smtg_target_add_auv2(Sky_Blue_EQ4-au
-		BUNDLE_NAME Sky_Blue_EQ4
-		BUNDLE_IDENTIFIER io.githuib.yg331.SkyBlueEQ4.audiounit
+	smtg_target_add_auv2(SVEQ-au
+		BUNDLE_NAME SVEQ
+		BUNDLE_IDENTIFIER io.githuib.yg331.SVEQ.audiounit
 		INFO_PLIST_TEMPLATE resource/au-info.plist
-		VST3_PLUGIN_TARGET Sky_Blue_EQ4)
+		VST3_PLUGIN_TARGET SVEQ)
 endif(SMTG_MAC AND XCODE AND SMTG_COREAUDIO_SDK_PATH)

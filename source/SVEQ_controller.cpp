@@ -19,96 +19,12 @@
 
 #include "vstgui/lib/controls/cparamdisplay.h"
 #include <cuchar>
+#include <cstdio>
 
 using namespace Steinberg;
 
 
 namespace VSTGUI {
-
-	KnobText::KnobText(const VSTGUI::CRect& size)
-		: CTextEdit(size, nullptr, -1)
-	{
-	}
-	void KnobText::draw(VSTGUI::CDrawContext* pContext)
-	{
-		if (platformControl)
-		{
-			drawBack(pContext);
-			if (!platformControl->drawsPlaceholder() && !placeholderString.empty() &&
-				platformControl->getText().empty())
-			{
-				pContext->saveGlobalState();
-				pContext->setGlobalAlpha(pContext->getGlobalAlpha() * 0.5f);
-				drawPlatformText(pContext, placeholderString.getPlatformString());
-				pContext->restoreGlobalState();
-			}
-			setDirty(false);
-			return;
-		}
-		drawBack(pContext);
-		if (text.empty())
-		{
-			if (!placeholderString.empty())
-			{
-				pContext->saveGlobalState();
-				pContext->setGlobalAlpha(pContext->getGlobalAlpha() * 0.5f);
-				drawPlatformText(pContext, placeholderString.getPlatformString());
-				pContext->restoreGlobalState();
-			}
-		}
-		else if (getSecureStyle())
-		{
-			constexpr auto bulletCharacter = "\xE2\x80\xA2";
-			UTF8String str;
-			for (auto i = 0u; i < text.length(); ++i)
-				str += bulletCharacter;
-			drawPlatformText(pContext, str.getPlatformString());
-		}
-		else {
-
-			UTF8String str = "dB";
-
-			drawPlatformText(pContext, str.getPlatformString());
-
-			//CTextLabel::draw(pContext);
-		}
-
-		setDirty(false);
-	}
-
-	void KnobText::updateText(IPlatformTextEdit* pte)
-	{
-		
-		auto newText = pte->getText();
-		if (newText != getText())
-		{
-			beginEdit();
-
-			setText(newText);
-
-			CParamDisplay::valueChanged();
-
-			endEdit();
-		}
-		 {
-			beginEdit();
-			
-			std::string str = "";
-			char cstr[3] = "\0";
-			mbstate_t mbs;
-			for (const auto& it : "dB") {
-				memset(&mbs, 0, sizeof(mbs));//set shift state to the initial state
-				memmove(cstr, "\0\0\0", 3);
-				c16rtomb(cstr, it, &mbs);
-				str.append(std::string(cstr));
-			}//for
-			setText((VSTGUI::UTF8String)str);
-			CParamDisplay::valueChanged();
-
-			endEdit();
-		}
-	}
-
 	_6dBButton::_6dBButton(const VSTGUI::CRect& size, Steinberg::Vst::EditController* editController, Steinberg::Vst::ParamID _type)
 		: DelegationController(nullptr)
 		, CTextButton(size)
@@ -616,7 +532,7 @@ namespace VSTGUI {
 			path->beginSubpath(VSTGUI::CPoint(r.left-1, y_mid));			
 			for (int x = -1; x <= r.getWidth()+1; x++) {
 				double tmp = MIN_FREQ * exp(FREQ_LOG_MAX * x / r.getWidth());
-				double freq = max(min(tmp, MAX_FREQ), MIN_FREQ);
+				double freq = (std::max)((std::min)(tmp, MAX_FREQ), MIN_FREQ);
 
 				double dB_level = level;
 
@@ -668,7 +584,7 @@ Vst::ParamValue LogRangeParameter::toPlain(Vst::ParamValue _valueNormalized) con
 {
 	double FREQ_LOG_MAX = log(getMax() / getMin());
 	double tmp = getMin() * exp(FREQ_LOG_MAX * _valueNormalized);
-	double freq = max(min(tmp, getMax()), getMin());
+	double freq = (std::max)((std::min)(tmp, getMax()), getMin());
 	return freq;
 	//return _valueNormalized * (getMax() - getMin()) + getMin();
 }

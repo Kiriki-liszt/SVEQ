@@ -147,10 +147,10 @@ protected:
 
 	typedef struct _Flt {
 		//double alignas(16) coef[maxTap] = { 0, };
-		double alignas(16) coef_hf[halfTap] = { 0, };
+		double coef_hf alignas(16) [halfTap] = { 0, };
 		//double alignas(16) buff[maxTap] = { 0, };
-		double alignas(16) buff_up[halfTap] = { 0, };
-		double alignas(16) buff_dn[halfTap] = { 0, };
+		double buff_up alignas(16) [halfTap] = { 0, };
+		double buff_dn alignas(16) [halfTap] = { 0, };
 	} Flt;
 
 	Flt dnSample_21[2];
