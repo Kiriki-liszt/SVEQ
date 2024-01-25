@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/Kiriki-liszt/SVEQ/main/screenshot.png"  width="600"/>  
 
-SVEQ is 'State Space', SVF EQ.  
+SVEQ is 'State Space' modeling, SVF EQ.  
 Runs in double precision 64-bit internal processing. Also double precision input / output if supported.  
 Internal sample rate is oversampled to 192/176.2kHz in 48/44.1kHz, 96/88.1kHz sample rates.  
 It does run under 44.1kHz, but may have some EQ curve cramping.  
