@@ -22,6 +22,12 @@ It does run under 44.1kHz, but may have some EQ curve cramping.
 VSTSDK 3.7.9 used  
 VSTGUI 4.12 used  
 
+## Fonts  
+
+Font used in this plugin is 'Pretendard' by 길형진.  
+https://github.com/orioncactus/pretendard.git  
+The font is under OFL-1.1 license.  
+
 ## Version logs
 
 v0.0.1   : intial try.  
