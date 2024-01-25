@@ -148,6 +148,13 @@ tresult PLUGIN_API SVEQProcessor::setActive (TBool state)
 	return AudioEffect::setActive (state);
 }
 
+uint32 PLUGIN_API SVEQProcessor::getLatencySamples()
+{
+	if (fParamOS == overSample_1x) return 0;
+	else if (fParamOS == overSample_2x) return latency_Fir_x2;
+	else                                return latency_Fir_x4;
+}
+
 //------------------------------------------------------------------------
 tresult PLUGIN_API SVEQProcessor::process (Vst::ProcessData& data)
 {

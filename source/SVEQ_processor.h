@@ -51,6 +51,9 @@ public:
 	/** Asks if a given sample size is supported see SymbolicSampleSizes. */
 	Steinberg::tresult PLUGIN_API canProcessSampleSize (Steinberg::int32 symbolicSampleSize) SMTG_OVERRIDE;
 
+	/** Gets the current Latency in samples. */
+	Steinberg::uint32 PLUGIN_API getLatencySamples() SMTG_OVERRIDE;
+
 	/** Here we go...the process call */
 	Steinberg::tresult PLUGIN_API process (Steinberg::Vst::ProcessData& data) SMTG_OVERRIDE;
 		
