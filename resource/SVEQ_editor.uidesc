@@ -182,16 +182,16 @@
 		},
 		"fonts": {
 			"Pretendard": {
-				"font-name": "Pretendard",
+				"font-name": "Pretendard Std",
 				"size": "12"
 			},
 			"Pretendard Lge Bld": {
 				"bold": "true",
-				"font-name": "Pretendard",
-				"size": "20"
+				"font-name": "Pretendard Std",
+				"size": "22"
 			},
 			"Pretendard Sml": {
-				"font-name": "Pretendard",
+				"font-name": "Pretendard Std",
 				"size": "10"
 			}
 		},
@@ -362,7 +362,7 @@
 				"SplitViewSize_1_1": "0.5110593713620489308979699671908747404814",
 				"SplitViewSize_2_0": "0.7385444743935309919180554061313159763813",
 				"SplitViewSize_2_1": "0.2569631626235399646240864512947155162692",
-				"TabSwitchValue": "3",
+				"TabSwitchValue": "6",
 				"Version": "1",
 				"WriteRCFile": "true"
 			},
@@ -1149,7 +1149,7 @@
 											"min-value": "0",
 											"mouse-enabled": "true",
 											"opacity": "1",
-											"origin": "84, 0",
+											"origin": "51, 0",
 											"round-rect-radius": "6",
 											"shadow-color": "~ RedCColor",
 											"size": "30, 20",
@@ -1187,7 +1187,7 @@
 											"min-value": "0",
 											"mouse-enabled": "true",
 											"opacity": "1",
-											"origin": "125, 0",
+											"origin": "106, 0",
 											"round-rect-radius": "6",
 											"shadow-color": "~ RedCColor",
 											"size": "30, 20",
@@ -1225,7 +1225,7 @@
 											"min-value": "0",
 											"mouse-enabled": "true",
 											"opacity": "1",
-											"origin": "153, 0",
+											"origin": "139, 0",
 											"round-rect-radius": "6",
 											"shadow-color": "~ RedCColor",
 											"size": "30, 20",
@@ -1453,7 +1453,7 @@
 											"min-value": "0",
 											"mouse-enabled": "true",
 											"opacity": "1",
-											"origin": "455, 0",
+											"origin": "423, 0",
 											"round-rect-radius": "6",
 											"shadow-color": "~ RedCColor",
 											"size": "30, 20",
@@ -1491,7 +1491,7 @@
 											"min-value": "0",
 											"mouse-enabled": "true",
 											"opacity": "1",
-											"origin": "496, 0",
+											"origin": "478, 0",
 											"round-rect-radius": "6",
 											"shadow-color": "~ RedCColor",
 											"size": "30, 20",
@@ -1529,7 +1529,7 @@
 											"min-value": "0",
 											"mouse-enabled": "true",
 											"opacity": "1",
-											"origin": "524, 0",
+											"origin": "511, 0",
 											"round-rect-radius": "6",
 											"shadow-color": "~ RedCColor",
 											"size": "30, 20",

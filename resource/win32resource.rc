@@ -36,7 +36,7 @@ knob_yellow_sml_2.0x.png PNG "knob_yellow_sml_2.0x.png"
 btn_curve.png PNG "btn_curve.png"
 btn_curve_2.0x.png PNG "btn_curve_2.0x.png"
 
-PretendardRegular RCDATA "Pretendard-Regular.ttf"
+PretendardRegular RCDATA "PretendardMono-Regular.ttf"
 
 /////////////////////////////////////////////////////////////////////////////
 // Version

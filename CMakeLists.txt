@@ -73,7 +73,7 @@ if(SMTG_ENABLE_VSTGUI_SUPPORT)
             resource/btn_curve.png
             resource/btn_curve_2.0x.png
 
-            resource/Pretendard-Regular.ttf
+            resource/PretendardMono-Regular.ttf
     )
     target_link_libraries(SVEQ
         PRIVATE
@@ -118,7 +118,7 @@ if(SMTG_ENABLE_VSTGUI_SUPPORT)
     )
     smtg_target_add_plugin_resources (SVEQ
      RESOURCES
-       "resource/Pretendard-Regular.ttf"
+       "resource/PretendardMono-Regular.ttf"
      OUTPUT_SUBDIRECTORY
        Fonts
    )
