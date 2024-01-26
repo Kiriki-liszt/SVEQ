@@ -50,12 +50,14 @@ VSTGUI 4.12 used
 ## Fonts  
 
 Font used in this plugin is 'Pretendard' by 길형진.  
-https://github.com/orioncactus/pretendard.git  
+[https://github.com/orioncactus/pretendard](https://github.com/orioncactus/pretendard)  
 The font is under OFL-1.1 license.  
+Modified for monospace number.  
 
 ## Version logs
 
 v0.0.1   : intial try.  
+v1.0.0   : stable release.  
 
 ## libs  
 
